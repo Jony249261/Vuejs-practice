@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js One Way data binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <style>
+        .one{
+            color:red;
+        }
+        .two{
+            text-decoration: line-through;
+        }
+        .active{
+
+            color:red;
+        }
+        .error{
+            border: 1px solid yellow;
+            padding: 5px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <a :href="message">Github</a>
+        <h2 :class="classes">Vue js one way data binding</h2>
+        <h2 :class="{active:is_active,error:has_error}">Vue JS</h2>
+      </div>
+
+
+
+
+
+
+
+      <script>
+          var app = new Vue({
+            el: '#app',
+            data: {
+            message: 'https://github.com/Jony249261',
+            classes:['one','two'],
+            is_active:true,
+            has_error:true
+            }
+      })
+      </script>
+</body>
+</html>
