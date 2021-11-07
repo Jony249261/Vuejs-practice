@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js two way data binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <br>
+        <input type="text"  v-model="message">
+        <br>
+        <input type="checkbox" v-model="status">
+        <small>Status Is {{status}}</small>
+        <hr>
+        <input type="checkbox" v-model="names" value="Html">Html
+        <input type="checkbox" v-model="names" value="Css">Css
+        <input type="checkbox" v-model="names" value="Js">Js
+        <input type="checkbox" v-model="names" value="Java">Java
+
+        <h4>Selected names:{{names.join(',')}}</h4>
+        <hr>
+        <hr>
+
+        <input type="radiow" v-model="felling" value="Html">Html
+        <input type="radiow" v-model="felling" value="Css">Css
+        <input type="radiow" v-model="felling" value="Js">Js
+        <input type="radiow" v-model="felling" value="Java">Java
+
+        <h4>Felling: {{felling}}</h4>
+      </div>
+
+
+
+
+
+
+
+      <script>
+          var app = new Vue({
+            el: '#app',
+            data: {
+            message: 'Vue Js Part-1!',
+            status:true,
+            names:[],
+            felling:null
+            }
+      })
+      </script>
+</body>
+</html>
