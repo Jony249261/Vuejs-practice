@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Vue Js Part-1</title>
+  </head>
+  <body>
+    
+    <div id="app" class="p-5">
+        <my-component user-name="Jony Islam" seller-id="10"></my-component>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        Vue.component('my-component',{
+            props:['userName','sellerId'],
+            template:`<h2>My name is {{userName}}--{{sellerId}}</h2>`
+        })
+        var app = new Vue({
+          el: '#app',
+          data: {
+          message: 'Vue Js Part-1!',
+          email:null,
+          password:null
+          },
+          methods:{
+              login(){
+                  console.log(this.email),
+                  console.log(this.password)
+              }
+          }
+    })
+    </script>
+  </body>
+</html>
