@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Keyboard Event</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <span>key up event</span>
+        <input type="text" @keyup="myEvent()">
+        <span>
+            Key up event
+        </span>
+        <input type="text" @keyup="myEvent1">
+        <span>keyPress Event</span>
+        <input type="text" @keypress="myEvent1">
+        <span>Key down Event</span>
+        <input type="text" @keydown="myEvent1">
+        <input type="text" @keyup.enter="myEvent1">
+      </div>
+
+
+
+
+
+
+
+      <script>
+          var app = new Vue({
+            el: '#app',
+            data: {
+            message: 'Vue Js Part-1!'
+            },
+
+            methods:{
+                myEvent(){
+                    console.log('typing...')
+                },
+                myEvent1(event){
+                    console.log(event.target.value)
+                },
+            }
+      })
+      </script>
+</body>
+</html>
