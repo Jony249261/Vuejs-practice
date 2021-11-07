@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js Event</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="(message++)">+</button> {{message}} <button @click="(message--)">-</button>
+        <button @click="add(1)">+</button> {{value}} <button @click="add(-1)">-</button>
+
+
+        <button @click="New()">Vue js</button>
+      </div>
+
+
+
+
+
+
+
+      <script>
+          var app = new Vue({
+            el: '#app',
+            data: {
+            message: 5,
+            value:10,
+            name:'It is a vue js event'
+            },
+            methods:{
+                add(val){
+                    return this.value +=val;
+                },
+                New(){
+                     alert(this.name)
+                }
+            }
+      })
+      </script>
+</body>
+</html>
